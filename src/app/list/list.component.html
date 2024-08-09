@@ -1,0 +1,53 @@
+<div *ngIf="users.length === 0" class="loading-screen d-flex justify-content-center align-items-center">
+    <div  class="loader ">
+        <div class="loaderBar"></div>
+    </div>
+</div>
+
+<nav *ngIf="users.length != 0" class="navbar position-relative bg-black">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white ps-5">Dashboard</a>
+        <form class="d-flex m-start" role="search">
+            <input class="form-control" type="number" placeholder="User Id ...." aria-label="Search" (keyup)="searchUser($event)">
+        </form>
+    </div>
+</nav>
+<div *ngIf="users.length != 0" class="main-list pt-5 pb-5">
+    
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let user of users">
+            <a [href]="'/user/' + user.id">
+                <div class="our-team">
+                    <div class="picture">
+                      <img class="img-fluid" [src]="user.avatar">
+                    </div>
+                    <div class="team-content">
+                      <h3 class="name">{{user.first_name}}</h3>
+                    </div>
+                    
+                  </div>
+            </a>
+            
+          
+        </div>
+      </div>
+</div>
+
+<nav>
+    <ul *ngIf="users[1]" class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="goToPage(1)">Previous</a>
+      </li>
+      <li class="page-item" [class.active]="currentPage === 1">
+        <a class="page-link" (click)="goToPage(1)">1</a>
+      </li>
+      <li class="page-item" [class.active]="currentPage === 2">
+        <a class="page-link" (click)="goToPage(2)">2</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === 2">
+        <a class="page-link" (click)="goToPage(2)">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,29 @@
+<div *ngIf="!user" class="loading-screen d-flex justify-content-center align-items-center">
+    <div  class="loader ">
+        <div class="loaderBar"></div>
+    </div>
+</div>
+<div *ngIf="user" class="main-list  d-flex justify-content-center align-items-center position-relative">
+    
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            
+                <div class="our-team">
+                    <div class="picture">
+                      <img class="img-fluid" [src]="user.avatar">
+                    </div>
+                    <div class="team-content">
+                      <h3 class="name">{{user.first_name}} {{user.last_name}}</h3>
+                      <h4 class="title">{{user.email}}</h4>
+                    </div>
+                    
+                  </div>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+    <a href="" class="previous">&laquo; Previous</a>
+</div>
