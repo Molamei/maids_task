@@ -1,27 +1,63 @@
-# Maids
+Overview
+This project is an Angular application designed to demonstrate proficiency in Angular (7+). The application features a dynamic user dashboard that allows users to view a list of users, search for specific users, and navigate to detailed user information pages. The app includes advanced features like state management, observables, and a loading screen that appears when the user data is being fetched or when the users array is empty.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Features
+User List: Displays a paginated list of users fetched from an external API.
+User Details: Allows navigation to a detailed page for each user, showing additional information.
+Search Functionality: Provides instant search capability for users by their ID.
+Loading Screen: Displays a loading indicator when user data is being fetched or when the users array is empty.
+State Management: Utilizes state management techniques for efficient data handling.
+Responsive Design: Ensures the application is accessible and visually appealing on different devices.
+Technologies Used
+Angular (7+): The main framework used to build the application.
+Bootstrap: Used for styling and pagination.
+RxJS: Used for handling asynchronous operations.
+Angular CLI: Used for project setup and management.
+Angular Material (Optional): Can be used for UI components.
+Getting Started
+Prerequisites
+Node.js (v12 or higher)
+Angular CLI (v7+)
+Installation
+Clone the repository:
 
-## Development server
+bash
+Copy code
+git clone https://github.com/MoLamei/maids_task.git
+Navigate to the project directory:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+bash
+Copy code
+cd maids_task
+Install the dependencies:
 
-## Code scaffolding
+bash
+Copy code
+npm install
+Running the Application
+To run the application locally, use:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+bash
+Copy code
+ng serve
+Navigate to http://localhost:4200/ in your web browser to view the application.
 
-## Build
+Building the Application
+To build the project for production, use:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+bash
+Copy code
+ng build --prod
+The build artifacts will be stored in the dist/ directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Usage
+User List
+The user list is displayed on the home page, showing six users per page.
+Click on a user's name to view more details on a separate page.
+User Search
+Use the search bar at the top of the page to instantly search users by their ID.
+The search results update as you type.
+Loading Screen
+A loading screen is displayed when the user data is being fetched or if the users array is empty.
+State Management
+The application uses state management to handle the loading and display of user data efficiently.
