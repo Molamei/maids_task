@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "/maids-task",
+            "outputPath": "dist/maids-task",
             "baseHref": "/maids-task/",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -39,7 +39,7 @@
           },
           "configurations": {
             "production": {
-              "outputPath": "/maids-task",
+              "outputPath": "dist/maids-task",
               "baseHref": "/maids-task/",
               "budgets": [
                 {
